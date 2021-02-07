@@ -1,0 +1,7 @@
+{
+  "name": "Do not close the app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
