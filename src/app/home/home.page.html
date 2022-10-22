@@ -1,20 +1,73 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title class="ion-text-center">
+      do Not close the App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-title class="ion-text-center timer" [ngStyle]="compStyle">{{ timestamp }} seconds</ion-title>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="titleHighscore">Your Personal Highscore:</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item lines="none">
+              <ion-icon color="success" slot="start" class="iconHighscore" name="person-outline"></ion-icon>
+              <ion-text color="success" slot="end" class="highscore">{{ pHs }} Seconds</ion-text>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="smallCard">
+          <ion-card-header>
+            <ion-card-title>Your Rank:</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item lines="none">
+              <ion-icon color="warning" slot="start" class="smallIcon" name="flame-outline"></ion-icon>
+              <ion-text color="warning" slot="end" class="smallText">#{{ myRank }}</ion-text>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="smallCard">
+          <ion-card-header>
+            <ion-card-title>App closed:</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item lines="none">
+              <ion-icon color="secondary" slot="start" class="smallIcon" name="hourglass-outline"></ion-icon>
+              <ion-text color="secondary" slot="end" class="smallText">{{ closed }}</ion-text>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="titleHighscore">World Record:</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item lines="none">
+              <ion-icon color="danger" slot="start" class="iconHighscore" name="earth-outline"></ion-icon>
+              <ion-text color="danger" slot="end" class="highscore">{{ allScores[0].data().highscore }} Seconds</ion-text>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>  
 </ion-content>

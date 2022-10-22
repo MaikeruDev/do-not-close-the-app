@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Circle Tap</string>
+    <string name="title_activity_main">Circle Tap</string>
+    <string name="package_name">com.michidev.circletap</string>
+    <string name="custom_url_scheme">com.michidev.circletap</string>
+</resources>

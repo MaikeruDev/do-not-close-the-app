@@ -1,27 +1,38 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-title{
+  font-family: 'Unica One', cursive;
+  font-size: 30px;
 }
 
-#container strong {
+ion-card-title{
+  font-family: 'Unica One', cursive;
+}
+
+.highscore{
   font-size: 20px;
-  line-height: 26px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.iconHighscore{
+  font-size: 30px;
 }
 
-#container a {
-  text-decoration: none;
+.titleHighscore{
+  font-size: 27px;
+}
+
+.smallIcon{
+  margin-right: 0;
+  margin-left: 0
+}
+
+.smallText{
+  margin-left: 5px;
+}
+
+ion-button{
+  width: 100%;
+}
+
+.timer{
+  font-size: 10vi;
+  padding-top: 2%;
 }
